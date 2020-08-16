@@ -14,8 +14,8 @@
 <p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujal-ops-cyber&show_icons=true" alt="sujal-ops-cyber" /></p><br>
 
 <p align="center">
-<a href="https://instagram.com/sujal_ops_cyber" target="_blank" style="color: #FF1493"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> ||
-<a href="https://discord.com/users/581752425858203659" target="_blank" style="color: #738ADB"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> ||
-<a href="https://reddit.com/u/sujal-ops-cyber" target="_blank" style="color: orangered"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> || 
-<a href="https://t.me/sujalopscyber" target="_blank" style="color: #0088cc"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
+<a href="https://instagram.com/sujal_ops_cyber" target="_blank"><img align="center"  style="color: #FF1493" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> ||
+<a href="https://discord.com/users/581752425858203659" target="_blank"><img align="center" style="color: #738ADB" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> ||
+<a href="https://reddit.com/u/sujal-ops-cyber" target="_blank"><img align="center" style="color: orangered" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> || 
+<a href="https://t.me/sujalopscyber" target="_blank"><img align="center" style="color: #0088cc" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
 </p>
