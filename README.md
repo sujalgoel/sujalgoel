@@ -12,7 +12,7 @@
 
 <p align="center"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujal-ops-cyber&layout=compact&hide=html" alt="sujal-ops-cyber" /></p>
 
-<p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujal-ops-cyber&show_icons=true&theme=vue" alt="sujal-ops-cyber" /></p><br>
+<p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujal-ops-cyber&show_icons=true&theme=graywhite" alt="sujal-ops-cyber" /></p><br>
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
 <h1 align="center">🤝 Get in touch!</h1>
