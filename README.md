@@ -3,7 +3,7 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=sujal-ops-cyber" alt="sujal-ops-cyber" /> </p>
 
-- 👨‍💻 All of my projects are available at **[https://sujalgoel.ml](https://sujalgoel.ml)** [![Netlify Status][https://api.netlify.com/api/v1/badges/faef6419-2d67-488a-95a8-998e1ad3e40f/deploy-status]][https://app.netlify.com/sites/sujalgoel/deploys]
+- 👨‍💻 All of my projects are available at **[https://sujalgoel.ml](https://sujalgoel.ml)** [![Netlify Status][netlify-image]][netlify-url]
 
 - 📫 Reach me at **admin@sujal.tk**
 <br>
@@ -20,3 +20,7 @@
 <a href="https://reddit.com/u/sujal-ops-cyber" target="_blank"><img align="center" style="color: orangered" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg" alt="sujal_ops_cyber" height="30" width="30" /></a> || 
 <a href="https://t.me/sujalopscyber" target="_blank"><img align="center" style="color: #0088cc" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
 </p>
+
+
+[netlify-image]: https://api.netlify.com/api/v1/badges/faef6419-2d67-488a-95a8-998e1ad3e40f/deploy-status
+[netlify-url]: https://app.netlify.com/sites/sujalgoel/deploys
