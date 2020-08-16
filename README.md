@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Sujal Goel</h1>
 <h3 align="center">I'm an avid front end web developer and also interested in bot development!</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=sujal-ops-cyber" alt="sujal-ops-cyber" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=sujal-ops-cyber" alt="sujal-ops-cyber" /> </p>
 
 - 👨‍💻 All of my projects are available at **[https://sujalgoel.ml](https://sujalgoel.ml)**
 
@@ -12,8 +12,8 @@
 <p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujal-ops-cyber&show_icons=true" alt="sujal-ops-cyber" /></p><br>
 
 <p align="center">
-<a href="https://instagram.com/sujal_ops_cyber" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
-<a href="https://discord.com/users/581752425858203659" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
-<a href="https://reddit.com/u/sujal-ops-cyber" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
-<a href="https://t.me/sujalopscyber" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
+<a href="https://instagram.com/sujal_ops_cyber" target="_blank" style="color: #FF1493"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>||
+<a href="https://discord.com/users/581752425858203659" target="_blank" style="color: #738ADB"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>||
+<a href="https://reddit.com/u/sujal-ops-cyber" target="_blank" style="color: orangered"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/reddit.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>||
+<a href="https://t.me/sujalopscyber" target="_blank" style="color: #0088cc"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
 </p>
