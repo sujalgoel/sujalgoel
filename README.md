@@ -19,7 +19,7 @@
 <a href="https://instagram.com/sujal_ops_cyber" target="_blank">
 <a href="https://discord.com/users/581752425858203659" target="_blank"><img alt="Discord" title="Discord" height="32" width="32" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/discord.svg"></a>
 <a href="https://reddit.com/u/sujal-ops-cyber" target="_blank"><img alt="Reddit" title="Reddit" height="32" width="32" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/reddit.svg"></a>
-<a href="https://t.me/sujalopscyber" target="_blank"><img align="center" style="color: #0088cc" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/telegram.svg" alt="sujal_ops_cyber" height="30" width="30" /></a>
+<a href="https://t.me/sujalopscyber" target="_blank"><img alt="Telegram" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/telegram/telegram.png" alt="sujal_ops_cyber" height="32" width="32" /></a>
 <a href="https://github.com/sujal-ops-cyber"><img alt="GitHub" title="GitHub" height="32" width="32" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/github.svg"></a>
 </p>
 
