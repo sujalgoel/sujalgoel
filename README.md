@@ -13,7 +13,11 @@
 <p align="center"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujalgoel&layout=compact&hide=html" alt="sujalgoel" /></p>
 
 <p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujalgoel&show_icons=true" alt="sujalgoel" /></p>
-
+<p align="center">
+    <a href="https://github.com/sujalgoel/github-quotes">
+    <img src="https://github-quotes.vercel.app/api?type=vertical"/>
+  </a>
+</p>
 <br>
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
