@@ -14,7 +14,7 @@
 
 <p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujalgoel&show_icons=true" alt="sujalgoel" /></p>
 <p align="center">
-    <a href="https://github.com/sujalgoel/github-quotes">
+    <a href="https://github.com/sujalgoel/github-quote">
     <img src="https://github-quote.vercel.app/api?type=dark"/>
   </a>
 </p>
