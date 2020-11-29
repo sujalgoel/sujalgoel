@@ -13,11 +13,6 @@
 <p align="center"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sujalgoel&layout=compact&hide=html" alt="sujalgoel" /></p>
 
 <p align="center">&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=sujalgoel&show_icons=true" alt="sujalgoel" /></p>
-<p align="center">
-    <a href="https://github.com/sujalgoel/github-quote">
-    <img src="https://github-quote.vercel.app/api?type=dark"/>
-  </a>
-</p>
 <h1 align="center">🤝 Get in touch!</h1>
 <p align="center">
 <a href="https://instagram.com/sujal_goel_10" target="_blank"><img alt="Discord" title="Discord" height="32" width="32" src="https://image.flaticon.com/icons/svg/174/174855.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
