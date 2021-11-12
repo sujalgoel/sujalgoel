@@ -3,7 +3,7 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=sujalgoel&style=flat-square" alt="sujalgoel" /> </p>
 
-- 👨‍💻 All of my projects are available at **[https://sujalgoel.ml](https://sujalgoel.ml)**
+- 👨‍💻 All of my projects are available at **[http://sujalgoel.engineer](https://sujalgoel.engineer)**
 
 - 📫 Reach me at **[goelsujal9@gmail.com](https://mail.google.com/mail/u/0/?view=cm&fs=1&to=goelsujal9@gmail.com)**
 <br>
