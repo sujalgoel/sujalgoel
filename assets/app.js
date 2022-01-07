@@ -6327,11 +6327,12 @@ function file(path) {
 
 function file_video(path) {
 	const url = window.location.origin + path;
-	// const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
+	const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
 	const content = `
     <div class="mdui-video-fluid mdui-center">
         <video id="dramaplayer" controls data-plyr-config='{ controls: [ 'play-large', 'restart', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'download', 'fullscreen'], captions: {active: true, language: 'auto'}}>
             <source src="${url}">
+            <track kind="captions" label="English" src="${subtitle}" srclang="en" default>
         </video>
     </div>
     <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>`;
