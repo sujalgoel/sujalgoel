@@ -6053,7 +6053,9 @@ function append_files_to_list(path, files) {
 				});
 			}
 			const ext = p.split('.').pop().toLowerCase();
-			if (
+			if(ext == 'vtt') {
+				return;
+			} else if (
 				'|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|pdf|'.indexOf(
 					`|${ext}|`,
 				) >= 0
@@ -6310,21 +6312,8 @@ function get_file(path, file, callback) {
 	}
 }
 function file(path) {
-	console.log(path);
-	const name = path.split('/').pop();
-	const ext = name
-		.split('.')
-		.pop()
-		.toLowerCase()
-		.replace('?a=view', '')
-		.toLowerCase();
-	if ('|html|php|css|go|java|js|json|txt|sh|md|'.indexOf(`|${ext}|`) >= 0) {
-		return file_code(path);
-	}
-	if ('|mp4|webm|avi|'.indexOf(`|${ext}|`) >= 0) {
-		return file_video(path);
-	}
-	if ('|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|'.indexOf(`|${ext}|`) >= 0) {
+	const ext = path.split('/').pop().split('.').pop().toLowerCase().replace('?a=view', '').toLowerCase();
+	if ('|mp4|webm|avi|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|'.indexOf(`|${ext}|`) >= 0) {
 		return file_video(path);
 	}
 	if ('|mp3|flac|wav|ogg|m4a|'.indexOf(`|${ext}|`) >= 0) {
@@ -6335,75 +6324,22 @@ function file(path) {
 	}
 	if (ext === 'pdf') return file_pdf(path);
 }
-function file_code(path) {
-	const type = {
-		html: 'html',
-		php: 'php',
-		css: 'css',
-		go: 'golang',
-		java: 'java',
-		js: 'javascript',
-		json: 'json',
-		txt: 'Text',
-		sh: 'sh',
-		md: 'Markdown',
-	};
-	const name = path.split('/').pop();
-	const ext = name.split('.').pop().toLowerCase();
-	const href = window.location.origin + path;
-	const content = `
-    <div class="mdui-container">
-    <pre id="editor" ></pre>
-    </div>
-    <div class="mdui-textfield">
-        <label class="mdui-textfield-label">Download Link</label>
-        <input class="mdui-textfield-input" type="text" value="${href}"/>
-    </div>
-    <a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 
-    <script src="//cdn.jsdelivr.net/gh/cheems/GDIndex/js/ace.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/cheems/GDIndex/js/ext-language_tools.js"></script>
-        `;
-	$('#content').html(content);
-	$.get(path, function(data) {
-		$('#editor').html($('<div/>').text(data).html());
-		let code_type = 'Text';
-		if (type[ext] != undefined) {
-			code_type = type[ext];
-		}
-		const editor = ace.edit('editor');
-		editor.setTheme('ace/theme/ambiance');
-		editor.setFontSize(18);
-		editor.session.setMode('ace/mode/' + code_type);
-		editor.setOptions({
-			enableBasicAutocompletion: !0,
-			enableSnippets: !0,
-			enableLiveAutocompletion: !0,
-			maxLines: Infinity,
-		});
-	});
-}
-function copyToClipboard(str) {
-	const $temp = $('<input>');
-	$('body').append($temp);
-	$temp.val(str).select();
-	document.execCommand('copy');
-	$temp.remove();
-}
 function file_video(path) {
-	const player = new Plyr('#dramaplayer');
 	const url = window.location.origin + path;
-	const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
+	// const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
 	const content = `
     <div class="mdui-video-fluid mdui-center">
-        <video id="dramaplayer" controls>
-            <source src="${url}" type="video/mp4">
-            <track kind="captions" label="English" src="${subtitle}" srclang="en" default>
+        <video id="dramaplayer" controls data-plyr-config='{ controls: [ 'play-large', 'restart', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'download', 'fullscreen'], captions: {active: true, language: 'auto'}}>
+            <source src="${url}">
+            <!-- <track kind="captions" label="English" src="${subtitle}" srclang="en" default> -->
         </video>
     </div>
     <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>`;
 	$('#content').html(content);
+	const player = new Plyr('#dramaplayer');
 }
+
 function file_audio(path) {
 	const url = window.location.origin + path;
 	const content = `
@@ -6422,6 +6358,7 @@ function file_audio(path) {
         `;
 	$('#content').html(content);
 }
+
 function file_pdf(path) {
 	const url = window.location.origin + path;
 	const inline_url = `${url}?inline=true`;
@@ -6438,6 +6375,7 @@ function file_pdf(path) {
 		.css({ padding: 0 })
 		.html(content);
 }
+
 function file_image(path) {
 	const url = window.location.origin + path;
 	const currentPathname = window.location.pathname;
@@ -6509,6 +6447,7 @@ function file_image(path) {
 		file(filepath);
 	});
 }
+
 function utc2local(utc_datetime) {
 	const T_pos = utc_datetime.indexOf('T');
 	const Z_pos = utc_datetime.indexOf('Z');
@@ -6549,6 +6488,7 @@ function utc2local(utc_datetime) {
             second.substring(second.length - 2, second.length)
 	);
 }
+
 function formatFileSize(bytes) {
 	if (bytes >= 1073741824) {
 		bytes = (bytes / 1073741824).toFixed(2) + ' GB';
