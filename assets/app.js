@@ -6532,13 +6532,11 @@ function file(path) {
 }
 
 function file_video(path) {
-    console.log(path)
 	const url = window.location.origin + path;
-	const subtitle = "https://drama-cdn.sujalgoel.engineer/" + path.replace('mp4', 'vtt').replace('0:/', '');
-    console.log(subtitle)
+	const subtitle = window.location.origin + path.replace('mp4', 'vtt');
 	const content = `
     <div class="mdui-video-fluid mdui-center">
-        <video id="dramaplayer" controls>
+        <video id="dramaplayer" controls data-poster="${'https://drama-cdn.sujalgoel.engineer/' + path.replace('.mp4', '.jpg').replace('/0:/', '')}">
             <source src="${url}">
             <track kind="captions" label="English" src="${subtitle}" srclang="en" default>
         </video>
