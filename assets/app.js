@@ -6108,8 +6108,8 @@ function get_file(path, file, callback) {
 	}
 }
 function file(path) {
+	console.log(path);
 	const name = path.split('/').pop();
-	console.log(name);
 	const ext = name
 		.split('.')
 		.pop()
