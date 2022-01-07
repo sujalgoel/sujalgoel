@@ -1,3 +1,4 @@
+/* ! jQuery v3.4.1 | (c) JS Foundation and other contributors | jquery.org/license */
 !(function(e, t) {
 	'use strict';
 	typeof module == 'object' && typeof module.exports == 'object'
@@ -5723,15 +5724,14 @@ if (UI.dark_mode) {
 	);
 }
 document.write(
-	'<link rel="stylesheet" href="//mooviejs.com/moovie/css/moovie.css">',
-);
-document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/mdui.min.js"></script>',
 );
 document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/flv.min.js"></script>',
 );
-document.write('<script src="//mooviejs.com/moovie/js/moovie.js"></script>');
+document.write(
+	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/DPlayer.min.js"></script>',
+);
 document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/markdown-it.min.js"></script>',
 );
@@ -6312,7 +6312,7 @@ function get_file(path, file, callback) {
 	}
 }
 function file(path) {
-	console.log('1');
+	console.log(path);
 	const name = path.split('/').pop();
 	const ext = name
 		.split('.')
@@ -6394,44 +6394,35 @@ function copyToClipboard(str) {
 }
 function file_video(path) {
 	const url = window.location.origin + path;
-	const thumbnail =
-		window.location.origin + path.replace('.mp4', '.png')
-			? path.replace('.mp4', '.png')
-			: path.replace('.mp4', '.jpg');
-
-	const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
-
 	const content = `
-	<div class="mdui-video-fluid mdui-center">
-        <video id="drama">
-            <source src="${url}">
-            <track kind="captions" label="English" srclang="en" src="${subtitle}">
-        </video>
-    </div>
+<div class="mdui-container-fluid">
+	<br>
+	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
+	<br>
+	<div class="mdui-textfield">
+	  <label class="mdui-textfield-label">Download Link
+	  <input class="mdui-textfield-input" type="text" value="${url}"/>
+	</div>
+</div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
+	const subtitle = path.replace('.mp4', '.vtt');
 	$('#content').html(content);
-	document.addEventListener('DOMContentLoaded', function() {
-		new Moovie({
-			selector: '#drama',
-			// dimensions: {
-			// 	width: '100%',
-			// },
-			config: {
-				controls: {
-					playtime: true,
-					mute: true,
-					volume: true,
-					subtitles: true,
-					config: true,
-					fullscreen: true,
-					submenuCaptions: true,
-					submenuOffset: true,
-					submenuSpeed: true,
-					allowLocalSubtitles: true,
-				},
-			},
-		});
+	const dp = new DPlayer({
+		container: document.getElementById('dplayer'),
+		loop: false,
+		screenshot: true,
+		preload: 'auto',
+		subtitle: {
+			type: 'webvtt',
+			fontSize: '20px',
+			color: '#fff',
+			url: window.location.origin + subtitle,
+		},
+		video: {
+			quality: [{ url: url, type: 'normal' }],
+			defaultQuality: 0,
+		},
 	});
 }
 function file_audio(path) {
