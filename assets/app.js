@@ -6313,7 +6313,7 @@ function get_file(path, file, callback) {
 	}
 }
 function file(path) {
-	console.log(path);
+	console.log('1');
 	const name = path.split('/').pop();
 	const ext = name
 		.split('.')
@@ -6403,29 +6403,21 @@ function file_video(path) {
 	const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
 
 	const content = `
-<div class="mdui-container-fluid">
-	<br>
 	<div class="mdui-video-fluid mdui-center">
-        <video id="Drama" poster="${thumbnail}">
+        <video id="drama" poster="${thumbnail}">
             <source src="${url}">
             <track kind="captions" label="English" srclang="en" src="${subtitle}">
         </video>
     </div>
-	<br>
-	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link
-	  <input class="mdui-textfield-input" type="text" value="${url}"/>
-	</div>
-</div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
 	document.addEventListener('DOMContentLoaded', function() {
-		const demo1 = new Moovie({
-			selector: '#Drama',
-			dimensions: {
-				width: '100%',
-			},
+		new Moovie({
+			selector: '#drama',
+			// dimensions: {
+			// 	width: '100%',
+			// },
 			config: {
 				controls: {
 					playtime: true,
