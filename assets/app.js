@@ -6109,6 +6109,7 @@ function get_file(path, file, callback) {
 }
 function file(path) {
 	const name = path.split('/').pop();
+	console.log(name);
 	const ext = name
 		.split('.')
 		.pop()
@@ -6195,17 +6196,13 @@ function file_video(path) {
 	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
 	<br>
 	<div class="mdui-textfield">
-	  <label class="mdui-textfield-label">Download Link <i class="mdui-icon material-icons">content_copy</i></label>
+	  <label class="mdui-textfield-label">Download Link
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
 	</div>
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
 	$('#content').html(content);
-	$('#copy-link').on('click', () => {
-		copyToClipboard(url);
-		mdui.snackbar('Copied to clipboard!');
-	});
 	const dp = new DPlayer({
 		container: document.getElementById('dplayer'),
 		loop: false,
@@ -6227,7 +6224,6 @@ function file_audio(path) {
 	  <source src="${url}"">
 	</audio>
 	<br>
-	<!-- ???? -->
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download Link</label>
 	  <input class="mdui-textfield-input" type="text" value="${url}"/>
