@@ -5724,14 +5724,15 @@ if (UI.dark_mode) {
 	);
 }
 document.write(
+	'<link rel="stylesheet" href="//mooviejs.com/moovie/css/moovie.css">',
+);
+document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/mdui.min.js"></script>',
 );
 document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/flv.min.js"></script>',
 );
-document.write(
-	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/DPlayer.min.js"></script>',
-);
+document.write('<script src="//mooviejs.com/moovie/js/moovie.js"></script>');
 document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/markdown-it.min.js"></script>',
 );
@@ -6394,10 +6395,22 @@ function copyToClipboard(str) {
 }
 function file_video(path) {
 	const url = window.location.origin + path;
+	const thumbnail =
+		window.location.origin + path.replace('.mp4', '.png')
+			? path.replace('.mp4', '.png')
+			: path.replace('.mp4', '.jpg');
+
+	const subtitle = window.location.origin + path.replace('.mp4', '.vtt');
+
 	const content = `
 <div class="mdui-container-fluid">
 	<br>
-	<div class="mdui-video-fluid mdui-center" id="dplayer"></div>
+	<div class="mdui-video-fluid mdui-center">
+        <video id="Drama" poster="${thumbnail}">
+            <source src="${url}">
+            <track kind="captions" label="English" srclang="en" src="${subtitle}">
+        </video>
+    </div>
 	<br>
 	<div class="mdui-textfield">
 	  <label class="mdui-textfield-label">Download Link
@@ -6406,25 +6419,28 @@ function file_video(path) {
 </div>
 <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
 	`;
-	const thumbnail = path.replace('.mp4', '.png')
-		? path.replace('.mp4', '.png')
-		: path.replace('.mp4', '.jpg');
-	const subtitle = path.replace('.mp4', '.vtt');
 	$('#content').html(content);
-	const dp = new DPlayer({
-		container: document.getElementById('dplayer'),
-		loop: false,
-		screenshot: true,
-		preload: 'auto',
-		subtitle: {
-			url: window.location.origin + subtitle,
-		},
-		video: {
-			quality: [{ url: url, type: 'normal' }],
-			autoplay: true,
-			defaultQuality: 0,
-			thumbnails: window.location.origin + thumbnail,
-		},
+	document.addEventListener('DOMContentLoaded', function() {
+		const demo1 = new Moovie({
+			selector: '#Drama',
+			dimensions: {
+				width: '100%',
+			},
+			config: {
+				controls: {
+					playtime: true,
+					mute: true,
+					volume: true,
+					subtitles: true,
+					config: true,
+					fullscreen: true,
+					submenuCaptions: true,
+					submenuOffset: true,
+					submenuSpeed: true,
+					allowLocalSubtitles: true,
+				},
+			},
+		});
 	});
 }
 function file_audio(path) {
