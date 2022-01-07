@@ -5917,7 +5917,7 @@ document.write(
 	'<script src="//rawcdn.githack.com/cheems/GDIndex/295ceaf2d64b2cb8578b21c0313d75b7bc8738a1/js/markdown-it.min.js"></script>',
 );
 document.write(
-	'<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}.plyr__caption{font-size: 30px !important; text-shadow: rgb(1 0 1) 0px 0px 5px, rgb(1 0 1) 0px 1px 5px, rgb(1 0 1) 0px 2px 5px;background-color: rgba(1, 0, 1, 0);line-height: 300%;}</style>',
+	'<style>.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-container{max-width:980px}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}@media screen and (max-width:980px){.mdui-list-item .mdui-text-right{display:none}.mdui-container{width:100%!important;margin:0}}.plyr__caption{bottom: 3%;}.plyr__caption{font-size: 40px !important; text-shadow: rgb(1 0 1) 0px 0px 5px, rgb(1 0 1) 0px 1px 5px, rgb(1 0 1) 0px 2px 5px;background-color: rgba(1, 0, 1, 0);line-height: 150%;}</style>',
 );
 if (UI.dark_mode) {
 	document.write(
@@ -6251,7 +6251,7 @@ function append_files_to_list(path, files) {
 			}
 			const ext = p.split('.').pop().toLowerCase();
 			if (ext == 'vtt') {
-				return;
+				continue;
 			} else if (
 				'|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|pdf|'.indexOf(
 					`|${ext}|`,
