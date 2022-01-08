@@ -6250,16 +6250,16 @@ function append_files_to_list(path, files) {
 				});
 			}
 			const ext = p.split('.').pop().toLowerCase();
-			if (ext == 'vtt') {
-				continue;
-			} else if (
-				'|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|pdf|'.indexOf(
+			if (
+				'|md|mp4|webm|avi|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|flv|pdf|'.indexOf(
 					`|${ext}|`,
 				) >= 0
 			) {
 				targetFiles.push(filepath);
 				p += '?a=view';
 				c += ' view';
+			} else {
+				continue;
 			}
 			html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a gd-type="${item.mimeType}" href="${p}" class="${c}">
                 <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate" title="${item.name}">
@@ -6421,7 +6421,7 @@ function append_search_result_to_list(files) {
 			let c = 'file';
 			const ext = item.name.split('.').pop().toLowerCase();
 			if (
-				'|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|'.indexOf(
+				'|md|mp4|webm|avi|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|flv|pdf|'.indexOf(
 					`|${ext}|`,
 				) >= 0
 			) {
@@ -6534,7 +6534,7 @@ function file(path) {
 function file_video(path) {
 	const url = window.location.origin + path;
 	const subtitle = window.location.origin + path.replace('mp4', 'vtt');
-	const poster = 'https://drama-cdn.sujalgoel.engineer/' + path.replace('.mp4', '.png').replace('/0:/', '') ? path.replace('.mp4', '.png').replace('/0:/', '') : path.replace('.mp4', '.jpg').replace('/0:/', '');
+	const poster = window.location.origin + path.replace('.mp4', '.png') ? path.replace('.mp4', '.png') : path.replace('.mp4', '.jpg');
 	const content = `
     <div class="mdui-video-fluid mdui-center">
         <video id="dramaplayer" controls data-poster="${poster}">
