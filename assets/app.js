@@ -1262,7 +1262,7 @@
 		}
 
 		// function xe(e) {
-            function(e){
+		function xe() {
 			// for (let t = 0, n = e.length, r = ''; t < n; t++) {
 			// 	r += e[t].value;
 			// }
