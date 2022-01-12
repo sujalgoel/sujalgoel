@@ -6242,7 +6242,7 @@ function append_files_to_list(path, files) {
 				});
 			}
 			const ext = p.split('.').pop().toLowerCase();
-			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`) >= 0) {
+			if ('|md|mp4|mp3|mkv|'.indexOf(`|${ext}|`) >= 0) {
 				targetFiles.push(filepath);
 				p += '?a=view';
 				c += ' view';
@@ -6408,7 +6408,7 @@ function append_search_result_to_list(files) {
 		} else {
 			let c = 'file';
 			const ext = item.name.split('.').pop().toLowerCase();
-			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`) >= 0) {
+			if ('|md|mp4|mp3|mkv|'.indexOf(`|${ext}|`) >= 0) {
 				c += ' view';
 			} else {
 				continue;
@@ -6437,56 +6437,13 @@ function onSearchResultItemClick(a_ele) {
 	const me = $(a_ele);
 	const can_preview = me.hasClass('view');
 	const cur = window.current_drive_order;
-	let dialog = mdui.dialog({
-		title: '',
-		content: '<div class="mdui-text-center mdui-typo-title mdui-m-b-1">Getting Target Path...</div><div class="mdui-spinner mdui-spinner-colorful mdui-center"></div>',
-		history: !1,
-		modal: !0,
-		closeOnEsc: !0,
-	});
-	mdui.updateSpinners();
 	$.post(`/${cur}:id2path`, {
 		id: a_ele.id,
 	}, function(data) {
 		if (data) {
-			dialog.close();
 			const href = `/${cur}:${data}${can_preview ? '?a=view' : ''}`;
-			dialog = mdui.dialog({
-				title: '<i class="mdui-icon material-icons"></i>Target Path',
-				content: `<a href="${href}">${data}</a>`,
-				history: !1,
-				modal: !0,
-				closeOnEsc: !0,
-				buttons: [{
-					text: 'Open in same tab',
-					onClick: function() {
-						window.location.href = href;
-					},
-				},
-				{
-					text: 'Open in new tab',
-					onClick: function() {
-						window.open(href);
-					},
-				},
-				{
-					text: 'Cancel',
-				},
-				],
-			});
-			return;
+			window.location.href = href;
 		}
-		dialog.close();
-		dialog = mdui.dialog({
-			title: '<i class="mdui-icon material-icons">&#xe811;</i>Failed to get the target path',
-			content: 'It may be because this item does not exist in the Folder! It may also be because the file [Shared with me] has not been added to Personal Drive!',
-			history: !1,
-			modal: !0,
-			closeOnEsc: !0,
-			buttons: [{
-				text: 'WTF ???',
-			}],
-		});
 	});
 }
 
@@ -6505,16 +6462,58 @@ function get_file(path, file, callback) {
 
 function file(path) {
 	const ext = path.split('/').pop().split('.').pop().toLowerCase().replace('?a=view', '').toLowerCase();
-	if ('|mp4|webm|avi|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|'.indexOf(`|${ext}|`) >= 0) {
+	if ('|mp4|mkv|'.indexOf(`|${ext}|`) >= 0) {
 		return file_video(path);
-	}
-	if ('|mp3|flac|wav|ogg|m4a|'.indexOf(`|${ext}|`) >= 0) {
+	} else if ('|md|'.indexOf(`|${ext}|`) >= 0) {
+		return file_code(path);
+	} else
+	if ('|mp3|'.indexOf(`|${ext}|`) >= 0) {
 		return file_audio(path);
-	}
-	if ('|bmp|jpg|jpeg|png|gif|'.indexOf(`|${ext}|`) >= 0) {
+	} else
+	if ('|png|'.indexOf(`|${ext}|`) >= 0) {
 		return file_image(path);
-	}
-	if (ext === 'pdf') return file_pdf(path);
+	} else
+	if (ext === 'pdf') {return file_pdf(path);}
+}
+
+
+function file_code(path) {
+	const name = path.split('/').pop();
+	const file_name = decodeURIComponent(path.trim('/').split('/').slice(-1)[0].replaceAll('%5C%5C', '%5C'));
+	const ext = name.split('.').pop().toLowerCase();
+	const href = window.location.origin + path;
+	const content = `
+<div class="mdui-container">
+<pre id="editor" ></pre>
+</div>
+<div class="mdui-textfield">
+	<label class="mdui-textfield-label">File Name</label>
+	<input class="mdui-textfield-input" type="text" value="${file_name}"/>
+</div>
+<div class="mdui-textfield">
+	<label class="mdui-textfield-label">Download Link</label>
+	<input class="mdui-textfield-input" type="text" value="${href}"/>
+</div>
+<a href="${href}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
+
+<script src="//cdn.jsdelivr.net/gh/cheems/goindex-extended/js/ace.js"></script>
+<script src="//cdn.jsdelivr.net/gh/cheems/goindex-extended/js/ext-language_tools.js"></script>
+	`;
+	$('#content').html(content);
+	$.get(path, function(data) {
+		$('#editor').html($('<div/>').text(data).html());
+		const code_type = 'Markdown';
+		const editor = ace.edit('editor');
+		editor.setTheme('ace/theme/ambiance');
+		editor.setFontSize(18);
+		editor.session.setMode('ace/mode/' + code_type);
+		editor.setOptions({
+			enableBasicAutocompletion: !0,
+			enableSnippets: !0,
+			enableLiveAutocompletion: !0,
+			maxLines: Infinity,
+		});
+	});
 }
 
 function file_video(path) {
@@ -6550,25 +6549,6 @@ function file_audio(path) {
     <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
         `;
 	$('#content').html(content);
-}
-
-function file_pdf(path) {
-	const url = window.location.origin + path;
-	const inline_url = `${url}?inline=true`;
-	const file_name = decodeURI(
-		path.slice(path.lastIndexOf('/') + 1, path.length),
-	);
-	const content = `
-        <object data="${inline_url}" type="application/pdf" name="${file_name}" style="width:100%;height:94vh;"><embed src="${inline_url}" type="application/pdf"/></object>
-        <a href="${url}" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">file_download</i></a>
-        `;
-	$('#content')
-		.removeClass('mdui-container')
-		.addClass('mdui-container-fluid')
-		.css({
-			padding: 0,
-		})
-		.html(content);
 }
 
 function file_image(path) {
