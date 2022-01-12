@@ -5944,7 +5944,8 @@ function append_files_to_list(path, files) {
 	html = '';
 	const targetFiles = [];
 	for (i in files) {
-		const item = files[i];
+		const item = files[i];s
+		console.log(item);
 		var p =
             path +
             encodeURIComponent(item.name)
@@ -6134,6 +6135,7 @@ function append_search_result_to_list(files) {
 	html = '';
 	for (i in files) {
 		const item = files[i];
+		console.log(item);
 		if (item.size == undefined) {
 			item.size = '';
 		}
@@ -6222,7 +6224,7 @@ function file(path) {
 
 
 function file_code(path) {
-	const file_name = path + decodeURIComponent(path.trim('/').split('/').slice(-1)[0].replaceAll('%5C%5C', '%5C'));
+	const p = path + encodeURIComponent(item.name).replaceAll('%5C', '%5C%5C').replace(/[!'()*]/g, escape);
 	const content = '<div id="readme" class="mdui-typo nexmoe-item" style="display:none; padding: 20px 0;"></div>';
 
 	$('#content').html(content);
