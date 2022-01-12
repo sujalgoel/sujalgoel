@@ -5929,10 +5929,6 @@ if (UI.hide_actions_tab) {
 	document.write('<style>.dummyclass{display: none!important}</style>');
 }
 
-if (UI.helpURL === '') {
-	document.write('<style>.dummyclass2{display: none!important}</style>');
-}
-
 function init() {
 	document.siteName = $('title').html();
 	$('body').addClass(
@@ -6004,15 +6000,15 @@ function nav(path) {
 	const model = window.MODEL;
 	let html = '';
 	const cur = window.current_drive_order || 0;
-	const names = window.drive_names;
-	html +=
-        '<select class="mdui-select" onchange="window.location.href=this.value" mdui-select style="overflow:visible;">';
-	names.forEach((name, idx) => {
-		html += `<option value="/${idx}:/"  ${
-			idx === cur ? 'selected="selected"' : ''
-		} >${name}</option>`;
-	});
-	html += '</select>';
+	// const names = window.drive_names;
+	// html +=
+	//     '<select class="mdui-select" onchange="window.location.href=this.value" mdui-select style="overflow:visible;">';
+	// names.forEach((name, idx) => {
+	// 	html += `<option value="/${idx}:/"  ${
+	// 		idx === cur ? 'selected="selected"' : ''
+	// 	} >${name}</option>`;
+	// });
+	// html += '</select>';
 	html += `<a href="/${cur}:/" class="mdui-typo-headline folder">${document.siteName}</a>`;
 	if (!model.is_search_page) {
 		const arr = path.trim('/').split('/');
@@ -6046,12 +6042,7 @@ function nav(path) {
                 <input class="mdui-textfield-input" type="text" name="q" placeholder="Search in current index" value="${search_text}"/>
                 </form>
                 <button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="$('.mdui-select').removeClass('hidedropdown');"><i class="mdui-icon material-icons">close</i></button>
-            </div>
-            <button class="mdui-textfield-icon mdui-btn mdui-btn-icon dummyclass2" onclick="window.open('${
-	UI.helpURL
-}','_blank')">
-            <i class="mdui-icon material-icons">help_outline</i>
-            </button>`;
+            </div>`;
 	if (model.root_type < 2) {
 		html += search_bar;
 	}
@@ -6251,11 +6242,7 @@ function append_files_to_list(path, files) {
 				});
 			}
 			const ext = p.split('.').pop().toLowerCase();
-			if (
-				'|md|mp4|webm|avi|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|flv|pdf|'.indexOf(
-					`|${ext}|`,
-				) >= 0
-			) {
+			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`) >= 0) {
 				targetFiles.push(filepath);
 				p += '?a=view';
 				c += ' view';
@@ -6421,12 +6408,10 @@ function append_search_result_to_list(files) {
 		} else {
 			let c = 'file';
 			const ext = item.name.split('.').pop().toLowerCase();
-			if (
-				'|md|mp4|webm|avi|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|flv|pdf|'.indexOf(
-					`|${ext}|`,
-				) >= 0
-			) {
+			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`,) >= 0) {s
 				c += ' view';
+			} else {
+				continue;
 			}
 			html += `<li class="mdui-list-item file mdui-ripple" target="_blank"><a id="${item['id']}" gd-type="${item.mimeType}" onclick="onSearchResultItemClick(this)" class="${c}">
                 <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate" title="${item.name}">
