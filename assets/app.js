@@ -5944,7 +5944,7 @@ function append_files_to_list(path, files) {
 	html = '';
 	const targetFiles = [];
 	for (i in files) {
-		const item = files[i];s
+		const item = files[i];
 		console.log(item);
 		var p =
             path +
