@@ -6408,7 +6408,7 @@ function append_search_result_to_list(files) {
 		} else {
 			let c = 'file';
 			const ext = item.name.split('.').pop().toLowerCase();
-			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`,) >= 0) {s
+			if ('|md|mp4|mp3|mkv|pdf|'.indexOf(`|${ext}|`) >= 0) {
 				c += ' view';
 			} else {
 				continue;
