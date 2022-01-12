@@ -6234,10 +6234,6 @@ function file_code(path) {
 <pre id="editor" ></pre>
 </div>
 <div class="mdui-textfield">
-	<label class="mdui-textfield-label">File Name</label>
-	<input class="mdui-textfield-input" type="text" value="${file_name}"/>
-</div>
-<div class="mdui-textfield">
 	<label class="mdui-textfield-label">Download Link</label>
 	<input class="mdui-textfield-input" type="text" value="${href}"/>
 </div>
@@ -6249,11 +6245,10 @@ function file_code(path) {
 	$('#content').html(content);
 	$.get(path, function(data) {
 		$('#editor').html($('<div/>').text(data).html());
-		const code_type = 'Markdown';
 		const editor = ace.edit('editor');
-		editor.setTheme('ace/theme/ambiance');
+		editor.setTheme('ace/theme/terminal');
 		editor.setFontSize(18);
-		editor.session.setMode('ace/mode/' + code_type);
+		editor.session.setMode('ace/mode/Markdown');
 		editor.setOptions({
 			enableBasicAutocompletion: !0,
 			enableSnippets: !0,
