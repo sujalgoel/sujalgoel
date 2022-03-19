@@ -1,4 +1,4 @@
-<h1 align="center">Hey 👋, I'm Sujal Goel</h1>
+<h1 align="center">Hey, I'm Sujal Goel</h1>
 <h3 align="center">I'm an avid front end developer who is also interested in Discord bot development!</h3>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=sujalgoel&style=flat-square" alt="sujalgoel" /> </p>
