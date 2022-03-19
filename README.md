@@ -3,7 +3,7 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=sujalgoel&style=flat-square" alt="sujalgoel" /> </p>
 
-- 👨‍💻 All of my projects are available at **[http://sujalgoel.engineer](https://sujalgoel.engineer)**
+- 👨‍💻 All of my projects are available at **[https://sujalgoel.engineer](https://sujalgoel.engineer)**
 
 - 📫 Reach me at **[goelsujal9@gmail.com](https://mail.google.com/mail/u/0/?view=cm&fs=1&to=goelsujal9@gmail.com)**
 <br>
@@ -18,5 +18,5 @@
 <p align="center">
 <a href="https://instagram.com/sujalgoel_10" target="_blank"><img alt="Discord" title="Discord" height="32" width="32" src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://discord.com/users/581752425858203659" target="_blank"><img alt="Discord" title="Discord" height="32" width="32" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/discord.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://reddit.com/u/sujalgoel_10" target="_blank"><img alt="Reddit" title="Reddit" height="32" width="32" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/reddit.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://reddit.com/u/sujalgoel_10" target="_blank"><img alt="Reddit" title="Reddit" height="32" width="32" src="https://www.svgrepo.com/show/331560/reddit.svg"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
