@@ -13,7 +13,7 @@ CPU: Apple M2 Pro
 GPU: Apple M2 Pro
 -------------------------
 Name: Sujal Goel
-Uptime: 19 Years
+Uptime: 20 Years
 Pronouns: He/Him
 Location: India
 Runtime: Node.js
