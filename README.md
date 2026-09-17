@@ -15,10 +15,18 @@ GPU: Apple M2 Pro
 Name: Sujal Goel
 Uptime: 21 Years
 Pronouns: He/Him
-Location: India
-Runtime: Node.js
-Frameworks: React.js, Next.js
-Languages: JavaScript, TypeScript, Python
+Location: India, working worldwide
+Site: hecodesforme.com
+-------------------------
+Languages: TypeScript, JavaScript, Python
+Runtime: Node.js, Python
+Frontend: Next.js, React, Tailwind
+Backend: FastAPI, Express
+Data: PostgreSQL, MongoDB, Redis
+Scraping: Playwright, Selenium, Scrapy
+Ship: Docker, GitHub Actions, Vercel
+Pays: Stripe, Shopify, Twilio
+-------------------------
 About: An ardent full stack developer with a horrible music taste (vouched by many)
 -------------------------
 ```
