@@ -3,17 +3,17 @@
 ```
 
 ```css
-sujalgoel@github
+sujalgoel@macbook
 -------------------------
-OS: macOS 14.4.1 23E224 arm64
+OS: macOS 27.0 26A428 arm64
 Host: Mac14,9
-Kernel: 23.4.0
+Kernel: 27.0.0
 Shell: zsh 5.9
 CPU: Apple M2 Pro
 GPU: Apple M2 Pro
 -------------------------
 Name: Sujal Goel
-Uptime: 20 Years
+Uptime: 21 Years
 Pronouns: He/Him
 Location: India
 Runtime: Node.js
@@ -23,6 +23,48 @@ About: An ardent full stack developer with a horrible music taste (vouched by ma
 -------------------------
 ```
 
+```zsh
+> ssh vps && neofetch
+```
+
+```css
+sujal@srv1927390
+-------------------------
+OS: Ubuntu 24.04.4 LTS x86_64
+Kernel: 6.8.0-138-generic
+Shell: zsh 5.9
+CPU: AMD EPYC 9354P (4) @ 3.25GHz
+Memory: 16 GB
+Disk: 193 GB NVMe
+-------------------------
+Proxy: Caddy 2.11.4, automatic TLS
+Sync: Mutagen, bidirectional
+Process: pm2, systemd
+Access: SSH, reverse tunnels
+-------------------------
+Why: the laptop is a terminal now.
+     Everything that matters runs
+     somewhere with a static IP.
+-------------------------
+```
+
+<h3 align="center">Things that are live</h3>
+
+<table align="center">
+  <tr>
+    <td align="center"><b><a href="https://www.threewordshare.com">threewordshare</a></b></td>
+    <td>Send a file, get back three plain words. Encrypted in the browser before it leaves, expires on its own, no account.</td>
+  </tr>
+  <tr>
+    <td align="center"><b><a href="https://sujalspace.io">sujalspace</a></b></td>
+    <td>Self-hosted everything. Reverse proxy, certificates, dashboards, deploys. One box, no vendor.</td>
+  </tr>
+</table>
+
+<p align="center">
+  <a href="https://www.npmjs.com/~sujalgoel"><b>npm</b></a> ·
+  <a href="https://github.com/sujalgoel?tab=repositories"><b>repos</b></a>
+</p>
 
 ![Views](https://hits.sh/github.com/sujalgoel/sujalgoel.svg?style=for-the-badge&label=Profile%20Views&color=white&labelColor=black&logo=github)
 
