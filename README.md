@@ -57,12 +57,3 @@ Why: The laptop is just a terminal now
 Rule: If it matters, it gets a static IP
 -------------------------
 ```
-
-![Views](https://hits.sh/github.com/sujalgoel/sujalgoel.svg?style=for-the-badge&label=Profile%20Views&color=white&labelColor=black&logo=github)
-
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sujalgoel/sujalgoel/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sujalgoel/sujalgoel/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/sujalgoel/sujalgoel/output/github-contribution-grid-snake.svg">
-</picture>
