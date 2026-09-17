@@ -53,9 +53,8 @@ Sync: Mutagen, bidirectional
 Process: pm2, systemd
 Access: SSH, reverse tunnels
 -------------------------
-Why: the laptop is a terminal now.
-     Everything that matters runs
-     somewhere with a static IP.
+Why: The laptop is just a terminal now
+Rule: If it matters, it gets a static IP
 -------------------------
 ```
 
