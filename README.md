@@ -48,24 +48,6 @@ Why: the laptop is a terminal now.
 -------------------------
 ```
 
-<h3 align="center">Things that are live</h3>
-
-<table align="center">
-  <tr>
-    <td align="center"><b><a href="https://www.threewordshare.com">threewordshare</a></b></td>
-    <td>Send a file, get back three plain words. Encrypted in the browser before it leaves, expires on its own, no account.</td>
-  </tr>
-  <tr>
-    <td align="center"><b><a href="https://sujalspace.io">sujalspace</a></b></td>
-    <td>Self-hosted everything. Reverse proxy, certificates, dashboards, deploys. One box, no vendor.</td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://www.npmjs.com/~sujalgoel"><b>npm</b></a> ·
-  <a href="https://github.com/sujalgoel?tab=repositories"><b>repos</b></a>
-</p>
-
 ![Views](https://hits.sh/github.com/sujalgoel/sujalgoel.svg?style=for-the-badge&label=Profile%20Views&color=white&labelColor=black&logo=github)
 
 
