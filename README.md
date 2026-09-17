@@ -27,11 +27,10 @@ Scraping: Playwright, Selenium, Scrapy
 Ship: Docker, GitHub Actions, Vercel
 Pays: Stripe, Shopify, Twilio
 -------------------------
-About: Full stack developer, 5+ years on early
-       teams. Top Rated on Upwork, 100% job
-       success. Builds things that run for
-       months without anyone touching them.
-       Horrible music taste (vouched by many).
+Experience: 5+ years on early teams
+Status: Top Rated on Upwork, 100% job success
+Builds: Things that run for months untouched
+Also: Horrible music taste (vouched by many)
 -------------------------
 ```
 
